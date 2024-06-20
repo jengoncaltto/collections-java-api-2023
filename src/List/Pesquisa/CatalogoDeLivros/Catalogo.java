@@ -1,4 +1,4 @@
-package Pesquisa.CatalogoDeLivros;
+package List.Pesquisa.CatalogoDeLivros;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,15 +6,15 @@ import java.util.List;
 public class Catalogo {
     private List<Livro> catalogoList;
 
-    public Catalogo() {
+    protected Catalogo() {
         this.catalogoList = new ArrayList<>();
     }
 
-    public void adicionarLivro(String titulo, String autor, int anoPublicacao) {
+    protected void adicionarLivro(String titulo, String autor, int anoPublicacao) {
         catalogoList.add(new Livro(titulo, autor, anoPublicacao));
     }
 
-    public List<Livro> pesquisaIntervaloAnos(int anoInicial, int anoFinal) {
+    protected List<Livro> pesquisaIntervaloAnos(int anoInicial, int anoFinal) {
         List<Livro> listaLivroAnos = new ArrayList<>();
         if (!catalogoList.isEmpty()) {
             for (Livro l : catalogoList) {
@@ -26,7 +26,7 @@ public class Catalogo {
         return listaLivroAnos;
     }
 
-    public List<Livro> pesquisaPorAutor(String autor) {
+    protected List<Livro> pesquisaPorAutor(String autor) {
         List<Livro> livrosPorAutor = new ArrayList<>();
         if (!catalogoList.isEmpty()) {
             for (Livro l : catalogoList) {
@@ -38,7 +38,7 @@ public class Catalogo {
         return livrosPorAutor;
     }
 
-    public Livro pesquisarTitulo(String titulo) {
+    protected Livro pesquisarTitulo(String titulo) {
         Livro livroPorTitulo = null;
         if (!catalogoList.isEmpty()) {
             for (Livro l : catalogoList) {
@@ -51,7 +51,7 @@ public class Catalogo {
         return livroPorTitulo;
     }
 
-    public List<Livro> anoDePublicacao(int anoPublicacao) {
+    protected List<Livro> anoDePublicacao(int anoPublicacao) {
         List<Livro> livroPorAnoPub = new ArrayList<>();
         if (!catalogoList.isEmpty()) {
             for (Livro l : catalogoList) {
