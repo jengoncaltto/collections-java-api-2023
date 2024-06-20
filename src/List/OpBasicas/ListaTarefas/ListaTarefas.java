@@ -6,7 +6,7 @@ import java.util.List;
 public class ListaTarefas {
     private List<Tarefa> tarefaList;
 
-    public ListaTarefas() {
+    protected ListaTarefas() {
         this.tarefaList = new ArrayList<>();
     }
 

@@ -56,6 +56,4 @@ public class AgendaContatos {
         agenda.atualizarNumeroContato("Amanda", 914375847);
         System.out.println(agenda.pesquisarPorNome("Amanda"));
     }
-
-
 }
