@@ -6,25 +6,25 @@ import java.util.Map;
 public class AgendaContatos {
     private Map<String, Integer> agendaMap;
 
-    public AgendaContatos() {
+    private AgendaContatos() {
         this.agendaMap = new HashMap<>();
     }
 
-    protected void adicionarContato(String nome, Integer telefone){
+    private void adicionarContato(String nome, Integer telefone){
         agendaMap.put(nome, telefone);
     }
 
-    protected void removerContato(String nome){
+    private void removerContato(String nome){
         if(!agendaMap.isEmpty()){
             agendaMap.remove(nome);
         }
     }
 
-    protected void exibirContatos(){
+    private void exibirContatos(){
         System.out.println(agendaMap);
     }
 
-    protected Integer pesquisarPorNome(String nome){
+    private Integer pesquisarPorNome(String nome){
         Integer numeroPorNome = null;
         if(!agendaMap.isEmpty()) {
             numeroPorNome = agendaMap.get(nome);
